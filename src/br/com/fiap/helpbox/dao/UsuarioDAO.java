@@ -1,13 +1,17 @@
 package br.com.fiap.helpbox.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import oracle.sql.DATE;
 import br.com.fiap.helpbox.beans.Usuario;
-import br.com.fiap.helpbox.bo.String;
 import br.com.fiap.helpbox.conexao.ConexaoFactory;
 
 public class UsuarioDAO {
@@ -20,35 +24,42 @@ public class UsuarioDAO {
 
 
 		// CRUD + List
-	public void acrescentadorID(){
+	public int acrescentadorID() throws Exception{
 		String sql = "SELECT cd_usuario FROM T_HB_USUARIO";
 		PreparedStatement estrutura = conexao.prepareStatement(sql);
 		ResultSet resultadoCod = estrutura.executeQuery();
-		int cod;
+		int cod = 0;
+		Usuario user= new Usuario();
 		
 		if(resultadoCod.next()){
-			cod = estrutura.setInt(resultadoCod.getInt("cd_usuario"));
-			cod = cod++;
+			 user.setCodigoUsuario(resultadoCod.getInt("cd_usuario"));
+			cod = user.getCodigoUsuario();
+			return cod = cod++;
 		}
+		return cod;
 	}
 	
 	// CRUD (Create)
-	public boolean addUsuario(String nome,String sobrenome,int cpf,String rg,String dataNasc,String endereco,int cep,int telefone,String email,String senha) throws Exception{
-		String sql = "insert into T_HB_USUARIO " + "(cd_usuario,nm_usuario, nm_sobrenome, nr_cpf, nr_rg, dt_nascimento, ds_endereco, nr_cep, nr_telefone, ds_email, ds_senha) values (?,?,?,?,?,?,?,?,?,?)";
+	public boolean addUsuario(String nome,String sobrenome,int cpf,String rg,String dataNasc,String endereco,int cep,int telefone,String email,String senha) throws SQLException,Exception{
+		String sql = "insert into T_HB_USUARIO (cd_usuario,nm_usuario, nm_sobrenome, nr_cpf, nr_rg, dt_nascimento, ds_endereco, nr_cep, nr_telefone, ds_email, ds_senha) values (?,?,?,?,?,?,?,?,?,?,?)";
 		
 		PreparedStatement estrutura = conexao.prepareStatement(sql);
+		
+		DateFormat fmt = new SimpleDateFormat("dd-mm-yy");
+		Date data = new Date(fmt.parse(dataNasc).getTime());
 		
 		estrutura.setInt(1,acrescentadorID());
 		estrutura.setString(2, nome);
 		estrutura.setString(3, sobrenome);
 		estrutura.setInt(4, cpf);
 		estrutura.setString(5, rg);
-		estrutura.setString(6, dataNasc);
+		estrutura.setDate(6, data);
 		estrutura.setString(7, endereco);
 		estrutura.setInt(8, cep);
 		estrutura.setInt(9, telefone);
 		estrutura.setString(10, email);
 		estrutura.setString(11, senha);
+		
 		estrutura.execute();
 		estrutura.close();
 		return true;

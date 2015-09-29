@@ -48,7 +48,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li> <a href="#about" class="smoothScroll"> Inicio</a></li>
-			<li> <a href="#contact" class="smoothScroll"> Contact</a></li>
+			<li> <a href="#contact" class="smoothScroll"> Contact</a></li></ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -195,65 +195,71 @@
 							<div class="form-group">
 						    <label for="text1" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Digite seu nome">
+						      <input type="text" class="form-control" id="text1" placeholder="Digite seu nome" name="nome">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="text1" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Digite seu sobrenome">
+						      <input type="text" class="form-control" id="text1" placeholder="Digite seu sobrenome" name="sobrenome">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="inputEmail1" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+						      <input type="email" class="form-control" id="inputEmail1" placeholder="Email" name="email">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="text1" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="CPF">
+						      <input type="text" class="form-control" id="text1" placeholder="CPF" name="cpf">
+						    </div>
+						  </div>
+						  <div class="form-group">,
+						    <label for="text1" class="col-lg-4 control-label"></label>
+						    <div class="col-lg-10">
+						      <input type="text" class="form-control" id="text1" placeholder="RG" name="rg">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="text1" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="RG">
+						      <input type="text" class="form-control" id="text1" placeholder="Endereço" name="endereco">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="text1" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Endereço">
+						      <input type="text" class="form-control" id="text1" placeholder="CEP" name="cep">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="text1" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="CEP">
+						      <input type="text" class="form-control" id="text1" placeholder="Telefone" name="telefone">
 						    </div>
-						  </div>
-						  <div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label"></label>
+						    </div>
+						    <div class="form-group">
+						    <label for="Senha" class="col-lg-4 control-label"></label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Telefone">
+						      <input type="password" class="form-control" id="Senha" placeholder="Senha" name="Senha">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="text1" class="col-lg-4 control-label">Nascimento</label>
 						    <div class="col-lg-10">
-						      <input type="date" class="form-control" id="text1" placeholder="Data de Nascimento">
+						      <input type="date" class="form-control" id="text1" placeholder="Data de Nascimento" name="dataNasc">
 						    </div>
 						  </div>
 
 						  <div class="form-group">
 						  	<div class="col-lg-10">
 							 <label for="text1" class="col-lg-4 ">Sexo:</label>							 
- 							 <select type="text"  class="form-control" id="text1">
- 							 <option>Selecione:</option>	
-   							 <option>Feminino</option>
-  							 <option>Masculino</option>
+ 							 <select type="text"  class="form-control" id="text1" name="sexo">
+ 							 <option >Selecione:</option>	
+   							 <option value="F">Feminino</option>
+  							 <option value="M">Masculino</option>
  							 </select>
  							 </div>
 						  </div>
@@ -262,6 +268,9 @@
 						    <div class="col-lg-10">
 						      <button type="submit" class="btn btn-success">Registrar</button>
 						    </div>
+						  </div>
+						  <div>
+						  	<p>${msgPosit}<p>
 						  </div>
 					   </form><!-- form -->
 					</p>
