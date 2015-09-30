@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import oracle.sql.DATE;
+import br.com.fiap.helpbox.beans.Objeto;
 import br.com.fiap.helpbox.beans.Usuario;
 import br.com.fiap.helpbox.conexao.ConexaoFactory;
 
@@ -66,11 +67,13 @@ public class UsuarioDAO {
 	}
 
 	// CRUD (Read)
-	public Usuario pesquisarUsuario(String strUsuario) throws Exception{
+	public  Usuario pesquisarUsuario(String email) throws Exception{
 		Usuario usuario = new Usuario();
-		PreparedStatement estrutura = this.conexao.prepareStatement("select * from T_HB_USUARIO");
-		estrutura.setString(1, strUsuario);
+		PreparedStatement estrutura = this.conexao.prepareStatement("select * from T_HB_USUARIO WHERE ds_email = ?");
+		estrutura.setString(1, email);
 		ResultSet resultadoDados = estrutura.executeQuery();
+		
+		try{
 		if(resultadoDados.next()){
 			usuario.setCodigoUsuario(resultadoDados.getInt("cd_usuario"));
 			usuario.setNome(resultadoDados.getString("nm_usuario"));
@@ -83,6 +86,9 @@ public class UsuarioDAO {
 			usuario.setTelefone(resultadoDados.getInt("nr_telefone"));
 			usuario.setEmail(resultadoDados.getString("ds_email"));
 			usuario.setSenha(resultadoDados.getString("ds_senha"));
+		}
+		}catch(SQLException se){
+			se.printStackTrace();
 		}
 		resultadoDados.close();
 		estrutura.close();
@@ -140,4 +146,15 @@ public class UsuarioDAO {
 		return lstUsuarios;
 	}
 
+	public boolean novaDoacao(Objeto obj) throws SQLException,Exception{
+		String sql = "INSERT INTO T_HB_OBJETO (cd_objeto, tp_objeto, ds_objeto, qt_objeto, peso) VALUES (?,?,?,?,?)";
+		PreparedStatement carrinho = conexao.prepareStatement(sql);
+		
+		carrinho.setInt(1, acrescentadorID());
+	//	carrinho.setString(2,obj. );
+		
+		
+		
+		return true;
+	}
 }

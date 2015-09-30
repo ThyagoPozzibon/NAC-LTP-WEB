@@ -28,73 +28,105 @@ package br.com.fiap.helpbox.beans;
 public class Objeto {
 	
 	private int codigoObjeto;
-	private String nome;
+	private String tipoObjeto;
 	private String descricao;
-	private int quantidade;
-	private String estado;
-	private String cor;
-	private String genero;	       
+	private String quantidade;
+	private String peso;
+	private String tamanho;
 	
 	
 	
 	public Objeto() {
 		super();
 	}
-	
-	public Objeto(int codigoObjeto, String nome, String descricao,
-			int quantidade, String estado, String cor, String genero) {
+
+
+	public Objeto(String tipoObjeto, String descricao, String quantidade,
+			String peso, String tamanho) {
 		super();
-		this.codigoObjeto = codigoObjeto;
-		this.nome = nome;
+		this.tipoObjeto = tipoObjeto;
 		this.descricao = descricao;
 		this.quantidade = quantidade;
-		this.estado = estado;
-		this.cor = cor;
-		this.genero = genero;
+		this.peso = peso;
+		this.tamanho = tamanho;
 	}
+
+
+
+
+
+
+
+	public String getTamanho() {
+		return tamanho;
+	}
+
+
+
+	public void setTamanho(String tamanho) {
+		this.tamanho = tamanho;
+	}
+
 
 
 	public int getCodigoObjeto() {
 		return codigoObjeto;
 	}
+
+
+
 	public void setCodigoObjeto(int codigoObjeto) {
 		this.codigoObjeto = codigoObjeto;
 	}
-	public String getNome() {
-		return nome;
+
+
+
+	public String getTipoObjeto() {
+		return tipoObjeto;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+
+
+	public void setTipoObjeto(String tipoObjeto) {
+		this.tipoObjeto = tipoObjeto;
 	}
+
+
+
 	public String getDescricao() {
 		return descricao;
 	}
+
+
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public int getQuantidade() {
+
+
+
+	public String getQuantidade() {
 		return quantidade;
 	}
-	public void setQuantidade(int quantidade) {
+
+
+
+	public void setQuantidade(String quantidade) {
 		this.quantidade = quantidade;
 	}
-	public String getEstado() {
-		return estado;
+
+
+
+	public String getPeso() {
+		return peso;
 	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-	public String getCor() {
-		return cor;
-	}
-	public void setCor(String cor) {
-		this.cor = cor;
-	}
-	public String getGenero() {
-		return genero;
-	}
-	public void setGenero(String genero) {
-		this.genero = genero;
+
+
+
+	public void setPeso(String peso) {
+		this.peso = peso;
 	}
 	
+	
 }
+	

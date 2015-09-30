@@ -19,7 +19,7 @@ public class UsuarioBO {
 	UsuarioDAO ud;
 	Usuario ub;
 	
-		// CRUD + List
+		
 
 	// CRUD (Create)
 	public boolean novoUsuario(String nome,String sobrenome,int cpf,String rg,String dataNasc,String endereco,int cep,int telefone,String email,String senha) throws Exception{
@@ -43,8 +43,10 @@ public class UsuarioBO {
 	}
 
 	// CRUD (Read)
-	public Usuario consultarUsuario(String u) throws Exception{
-		return new UsuarioDAO().pesquisarUsuario(u.toUpperCase());
+	public Usuario consultarUsuario(String email) throws Exception{
+	 return new UsuarioDAO().pesquisarUsuario(email);
+
+	
 	}
 	
 	// CRUD (Update)

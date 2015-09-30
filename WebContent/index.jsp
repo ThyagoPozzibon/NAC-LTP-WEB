@@ -189,7 +189,7 @@
 					<h3>Realise seu cadastro e doe!</h3>
 					<p> Com sua doação ajudenos a ajudar, faça pessoas felizes!</p>
 					<p>
-						<form class="form-horizontal" role="form" action="Servlet01">
+						<form class="form-horizontal" role="form" action="Servlet01" method="post">
 							
 							<input type="hidden" name="cadastro" value="cadastro"/>
 							<div class="form-group">
@@ -280,122 +280,45 @@
 				
 				
 			<div class="col-lg-4">
-					<h3>O que quer doar</h3>
-					<p>Se já é cadastrado é só registrar sua doação</p>
-					<p>
-						<form class="form-horizontal" role="form">
-							<div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label"></label>
+					
+						  
+						  <form action="Servlet01">
+						  <div class="form-group">,
+						    <label for="text1" class="col-lg-4 control-label">Para excluir seu cadastro digite seu email aki</label>
 						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="E-mail">
+						      <input type="text" class="form-control" id="text1" placeholder="Digite o  seu email aki" name="excluirUser"/>
+						      <input type="hidden" name="excluir" value="excluir"/>
 						    </div>
 						  </div>
-
-						 	<div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label">Objeto doado</label>
+						  <div class="form-group">
 						    <div class="col-lg-10">
-						      
-						      <label class="checkbox-inline"><input type="checkbox" value="">Roupa</label>
-                              <label class="checkbox-inline"><input type="checkbox" value="">Brinquedo</label>
-							  <label class="checkbox-inline"><input type="checkbox" value="">Móveis</label>
-   						    </div>
+						      <button type="submit" class="btn btn-success">Excluir</button>
+						     
 						    </div>
-						 
+						  </div>
+						  </form>
+			 </div>
+			 <div class="col-lg-4">
+						  
+						   <form action="Servlet01">
+						  <div class="form-group">
+						    <label for="text1" class="col-lg-4 control-label">Para Alterar seu cadastro digite seu email aki</label>
+						    <div class="col-lg-10">
+						      <input type="text" class="form-control" id="text1" placeholder="Digite o  seu email aki" name="alterarUser"/>
+						      <input type="hidden" name="alterar" value="alterar"/>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-lg-10">
+						      <button type="submit" class="btn btn-success">Alterar</button>
+						    
+						    </div>
+						  </div>
+						  </form>
 
 						
-						  <div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label"></label>
-						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Tamanho">
-						    </div>
-						  </div>
-
-						  <div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label"></label>
-						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Peso">
-						    </div>
-						  </div>
-
-						  <div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label">Quantidade</label>
-						    <div class="col-lg-10">
-						     <select >
-						     <option>0</option>
-   							 <option>1</option>
-   							 <option>2</option>
-  						     <option>3</option>
-   							 <option>4</option>
-   							 <option>5</option>
-   							 <option>6</option>
-  						     <option>7</option>
-   							 <option>8</option>
-   							 <option>9</option>
-   							 
-  						    
-  							 </select>
-  							 <select >
-  							 <option>0</option>
-   							 <option>1</option>
-   							 <option>2</option>
-  						     <option>3</option>
-   							 <option>4</option>
-   							 <option>5</option>
-   							 <option>6</option>
-  						     <option>7</option>
-   							 <option>8</option>
-   							 <option>9</option>
-   							 
-  						    
-  							 </select>
-  							 <select >
-  							 <option>0</option>
-   							 <option>1</option>
-   							 <option>2</option>
-  						     <option>3</option>
-   							 <option>4</option>
-   							 <option>5</option>
-   							 <option>6</option>
-  						     <option>7</option>
-   							 <option>8</option>
-   							 <option>9</option>
-   							
-  						    
-  							 </select>
-						    </div>
-						  </div>
-
-
-
-						  <div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label">Genero</label>
-						    <div class="col-lg-10">
-						      
-						      <label class="checkbox-inline"><input type="checkbox" value="">Feminino</label></br>
-                              <label class="checkbox-inline"><input type="checkbox" value="">Masculino</label></br>
-							  <label class="checkbox-inline"><input type="checkbox" value="">Sem genero</label>
-   								 </div>
-						    </div>
-						  
-                            
-
-						    <div class="form-group">
-						    <label for="text1" class="col-lg-4 control-label"></label>
-						    <div class="col-lg-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Descrição">
-						    </div>
-						  </div>
-
-						 
-
-						  <div class="form-group">
-						    <div class="col-lg-10">
-						      <button type="submit" class="btn btn-success">Registar</button>
-						    </div>
-						  </div>
-
-					   </form><!-- form -->
-					</p>
+					  
+					
 				</div>
 				</div><!-- col -->
 

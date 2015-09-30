@@ -18,32 +18,42 @@ import br.com.fiap.helpbox.dao.ObjetoDAO;
 
 public class ObjetoBO {
 
+	
 		// CRUD + List
 
+	public ObjetoBO() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
 	// CRUD (Create)
-	public void novoObjeto(Objeto o) throws Exception{
+	public boolean novoObjeto(Objeto o) throws Exception{
 // pessoa precisa estar cadastrada
-		new ObjetoDAO().addObjeto(o);     
+		if(new ObjetoDAO().addObjeto(o)==true){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	// CRUD (Read)
-	public Objeto consultarObjeto(String o) throws Exception{
-		return new ObjetoDAO().pesquisarObjeto(o.toUpperCase());
-	}
+	//public Objeto consultarObjeto(String o) throws Exception{
+	//	return new ObjetoDAO().pesquisarObjeto(o.toUpperCase());
+//	}
 
 	// CRUD (Update)
-	public int (String o) throws Exception{
-		return new ObjetoDAO().
-	}
+	//public int (String o) throws Exception{
+		//return new ObjetoDAO().
+	//}
 
 	// CRUD (Delete)
-	public int excluirObjeto(String o) throws Exception{
-		return new ObjetoDAO().deletarObjeto(o);
-	}
+	//public int excluirObjeto(String o) throws Exception{
+		//return new ObjetoDAO().deletarObjeto(o);
+//	}
 
 	// List
-	public List<Objeto> listarObjetos() throws Exception{
-		return new ObjetoDAO().listObjeto();
-	}
+//	public List<Objeto> listarObjetos() throws Exception{
+	//	return new ObjetoDAO().listObjeto();
+//	}
 
 }
