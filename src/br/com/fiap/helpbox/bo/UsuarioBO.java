@@ -5,6 +5,15 @@ import java.util.List;
 import br.com.fiap.helpbox.beans.Usuario;
 import br.com.fiap.helpbox.dao.UsuarioDAO;
 
+	/**
+	 * Nesse pacote BO, criamos outra classe, chamada 'UsuarioBO'. 
+	 * 
+	 * 
+	 * 
+	 * @author rm74656
+	 *
+	 */
+
 public class UsuarioBO {
 	
 	UsuarioDAO ud;

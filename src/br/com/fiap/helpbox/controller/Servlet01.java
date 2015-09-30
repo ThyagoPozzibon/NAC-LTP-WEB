@@ -11,9 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.fiap.helpbox.bo.UsuarioBO;
 
-/**
- * Servlet implementation class Servlet01
- */
+	/**
+	 * 
+	 * 
+	 * @author rm74656
+	 *
+	 */
+
 @WebServlet("/Servlet01")
 public class Servlet01 extends HttpServlet {
 	private static final long serialVersionUID = 1L;

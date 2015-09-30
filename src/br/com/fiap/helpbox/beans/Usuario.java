@@ -1,5 +1,31 @@
 package br.com.fiap.helpbox.beans;
 
+
+	/**
+	 * Nossa classe chamada Usuário é um beans com os atributos que um usuário
+	 * devem ter, precisam para a realização de nosso Cadastro. 
+	 * 
+	 * A frente de cada atributo, colocamos os seus respectivos tipos primitivos.
+	 * 
+	 * Para criar uma classe é necessário criar um método construtor com o mesmo
+	 * nome da classe. Cada vez que criamos um objeto ele deve ser adicionado 
+	 * 
+	 * Abaixo de cada atributo feito, geramos os getter's and setter's. Eles
+	 * servem para pegarmos as informações de variáveis da classe Usuário que são
+	 * definidas como "private", porém esses métodos são definidos como "public".
+	 * 
+	 * As variáveis "privates" só são visíveis dentro da própria classe. 
+	 *  
+	 * @author Beatriz Bernardo Biserra - RM74656
+	 * @author Hélder Alcântara - RM74504
+	 * @author Thyago Pozzibon - RM
+	 * @author Ulric Merguiço - RM
+	 * @version 1.0
+	 * @since 1.0
+	 * 
+	 */
+
+
 public class Usuario {
 
 	private int codigoUsuario;

@@ -5,6 +5,17 @@ import java.util.List;
 import br.com.fiap.helpbox.beans.Objeto;
 import br.com.fiap.helpbox.dao.ObjetoDAO;
 
+	 /**
+	  * Nesse pacote BO, criamos uma classe chamada 'ObjetoBO'. 
+	  * 
+	  * 
+	  * 
+	  * @author rm74656
+	  *
+	  */
+
+
+
 public class ObjetoBO {
 
 		// CRUD + List
